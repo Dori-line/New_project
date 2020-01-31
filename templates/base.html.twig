@@ -1,12 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}AMaMode!{% endblock %}</title>
+        <link href="https://fonts.googleapis.com/css?family=Rouge+Script&display=swap" rel="stylesheet">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
     </head>
     <body>
+
+    {% block header %}
+        <header>
+            <nav>
+                <a class="link-home" href="{{ path('home') }}">
+                <h1 id="homeLink">AMaMode</h1>
+                </a>
+                <ul>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    {% endblock %}
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+    {% block footer %}
+        <div>
+            <a href="#">
+                <img src="{{ asset('Images/logo-insta.png') }}" alt="Page Instagram">
+            </a>
+            <a href="#">
+                <img src="{{ asset('Images/logo-fb.png') }}" alt="Page Facebook">
+            </a>
+        </div>
+    {% endblock %}
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
     </body>
 </html>

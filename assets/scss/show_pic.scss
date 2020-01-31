@@ -1,0 +1,14 @@
+.the-photo {
+    display: flex;
+    justify-content: center;
+    p {
+        font-size: 30px;
+        font-weight: bolder;
+    }
+    img {
+        width: 518px;
+        height: 546px;
+        justify-content: center;
+        margin: 10px 10%;
+    }
+}

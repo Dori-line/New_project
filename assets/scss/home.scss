@@ -1,0 +1,15 @@
+.entryWorld {
+    margin: auto;
+    text-align: center;
+}
+
+.photos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px 50px;
+    img {
+        width: 518px;
+        height: 546px;
+    }
+}
